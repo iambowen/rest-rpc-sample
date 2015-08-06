@@ -19,13 +19,4 @@ resolvers ++= Seq("snapshots", "releases").map(Resolver.sonatypeRepo)
 
 initialCommands := "import iambowen.github.io.restrpcsample._"
 
-lazy val rest_rpc_sample = (project in file(".")).
-  enablePlugins(Sbtrestrpc).
-  settings(
-    name := "hello"
-  )
-// lazy val root = (project in file(".")).
-//   settings(commonSettings: _*).
-//   settings(
-//     commands ++= Seq(sampleCommand)
-//   )
+lazy val plugins = (project in file(".")).enablePlugins(Sbtrestrpc)
